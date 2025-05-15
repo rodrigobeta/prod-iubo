@@ -1,73 +1,64 @@
-/* src/app/Home.module.css */
 .mainContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #1a1a1a; /* Fondo oscuro principal */
-  color: #f0f0f0; /* Texto blanco/gris claro */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
-  padding: 20px; /* Este padding se mantendrá, pero en móviles pequeños añadiremos padding-top específico */
-  box-sizing: border-box;
+  background-color: #1a1a1a; 
+  color: #f0f0f0; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  padding: 20px; 
   text-align: center;
-  position: relative; /* Necesario para posicionar el projectName de forma absoluta dentro */
-}
+  position: relative; 
 
-/* Estilos para el nombre del proyecto "Prod-UIBO" */
 .projectName {
   position: absolute;
   top: 20px;
   right: 25px;
-  font-size: 1.4rem; /* Tamaño legible */
+  font-size: 1.4rem; 
   font-weight: bold;
   z-index: 10;
 }
 
 .projectNameProd {
-  color: #E53935; /* Un tono de rojo */
+  color: #E53935; 
 }
 
 .projectNameUibo {
-  color: #1E88E5; /* Un tono de azul */
+  color: #1E88E5; 
 }
-/* Fin de estilos para el nombre del proyecto */
 
 .timerDisplay {
-  font-size: 6rem; /* Tamaño grande para el tiempo */
-  font-weight: 300; /* Un peso ligero para elegancia */
+  font-size: 6rem; 
+  font-weight: 300; 
   margin-bottom: 40px;
   letter-spacing: 2px;
   display: flex;
   justify-content: center;
-  align-items: center; /* Alinea verticalmente los spans (incluyendo el separador de HH:MM) */
-}
+  align-items: center; 
 
-/* Estilo general para los spans dentro del timerDisplay (HH, MM, SS, y los ':') */
 .timerDisplay > span {
-  padding: 0 2px; /* Menor padding para que no se separe tanto con la animación */
-  display: inline-block; /* Necesario para transformaciones si las usas */
+  padding: 0 2px; 
+  display: inline-block; 
 }
 
-/* Estilos para los botones */
 .presetButtons,
 .customInputContainer,
 .controls {
   margin-bottom: 25px;
   display: flex;
-  gap: 15px; /* Espacio entre elementos */
-  flex-wrap: wrap; /* Para que se ajusten en pantallas pequeñas */
+  gap: 15px; 
+  flex-wrap: wrap; 
   justify-content: center;
   align-items: center;
 }
 
-/* Ajuste para el contenedor de input personalizado */
 .customInputContainer {
-  gap: 5px; /* Reducir un poco el gap para los inputs de HH y MM y el separador */
+  gap: 5px; 
 }
 
 .button {
-  background-color: #333; /* Botones gris oscuro */
+  background-color: #333; 
   color: #f0f0f0;
   border: 1px solid #555;
   padding: 10px 20px;
@@ -75,7 +66,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.1s ease;
-  min-width: 100px; /* Ancho mínimo para botones */
+  min-width: 100px; 
 }
 
 .button:hover {
@@ -95,7 +86,6 @@
   border-color: #404040;
 }
 
-/* Estilo para el input personalizado general (reutilizado por HH y MM) */
 .customInput {
   padding: 10px;
   font-size: 1rem;
@@ -106,19 +96,17 @@
   text-align: center;
 }
 
-/* Estilos específicos para inputs de Horas y Minutos */
 .customInputHours,
 .customInputMinutes {
-  width: 70px; /* Ancho específico para HH y MM */
+  width: 70px; 
 }
 
 .customInputSeparator {
-  font-size: 1.5rem; /* Tamaño para el ':' entre HH y MM */
+  font-size: 1.5rem; 
   color: #888;
-  padding: 0 5px; /* Espacio alrededor del separador */
-  line-height: 1; /* Ayuda a alinear mejor con los inputs */
+  padding: 0 5px; 
+  line-height: 1; 
 }
-/* Fin de estilos para inputs personalizados */
 
 .customInput::placeholder {
   color: #888;
@@ -126,9 +114,9 @@
 
 .secondsDigit {
   transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-  min-width: 2.5ch; /* Ajusta basado en el tamaño de fuente para evitar saltos de layout. 'ch' es ancho de caracter '0' */
-  text-align: center; /* Para que los números se alineen bien si el ancho es fijo */
-  display: inline-block; /* Asegurar que la transformación funcione bien */
+  min-width: 2.5ch; 
+  text-align: center; 
+  display: inline-block; 
 }
 
 .secondTick {
@@ -137,12 +125,11 @@
 }
 
 .controls {
-  min-height: 45px; /* Para evitar saltos de layout cuando aparecen/desaparecen botones */
-  /* Las otras propiedades de .controls ya están definidas en el grupo de selectores arriba */
+  min-height: 45px; 
 }
 
 .resetButton {
-  background-color: #c08000; /* Un color ámbar/naranja para reset */
+  background-color: #c08000; 
   border-color: #a06800;
 }
 .resetButton:hover {
@@ -150,7 +137,7 @@
 }
 
 .stopButton {
-  background-color: #d32f2f; /* Rojo para detener */
+  background-color: #d32f2f; 
   border-color: #b71c1c;
 }
 .stopButton:hover {
@@ -163,9 +150,8 @@
     font-style: italic;
 }
 
-/* Responsividad básica */
 @media (max-width: 768px) {
-  .projectName { /* Ajuste responsivo para el nombre del proyecto */
+  .projectName {
     font-size: 1.2rem;
     top: 15px;
     right: 20px;
@@ -177,45 +163,35 @@
 
   .presetButtons,
   .customInputContainer {
-    /* align-items: center; ya estaba en el grupo original */
-    /* display: flex; ya estaba en el grupo original */
-    flex-direction: column; /* Apilar en pantallas más pequeñas */
+    flex-direction: column; 
     width: 100%;
-    max-width: 300px; /* Para que no se estiren demasiado */
+    max-width: 300px;
   }
 
-  .customInputHours, /* Ajuste para inputs HH/MM en pantallas medianas */
+  .customInputHours, 
   .customInputMinutes {
     width: 60px;
   }
 
   .button,
-  .customInput { /* Esto aplicará a .customInputHours y .customInputMinutes también */
-    width: 100%; /* Ocupar todo el ancho disponible en la columna */
+  .customInput { 
+    width: 100%; 
   }
-  /* Si .customInputHours/Minutes deben tener un ancho fijo diferente al 100% en este breakpoint,
-     se define aquí después de .customInput para sobreescribir width: 100% */
   .customInputHours,
   .customInputMinutes {
-    width: 80px; /* Por ejemplo, si quieres que sigan siendo pequeños y no 100% */
-                 /* O déjalo como 100% si eso se ve bien con el layout de columna */
+    width: 80px; 
   }
 }
 
 @media (max-width: 480px) {
-  .mainContainer { /* Añadir padding-top para que el nombre del proyecto no se solape */
-      padding-top: 60px; /* Ajusta este valor según sea necesario */
-      /* El padding: 20px original se mantiene para los otros lados */
+  .mainContainer { 
+      padding-top: 60px; /
   }
 
-  .projectName { /* Ajuste responsivo para el nombre del proyecto en pantallas pequeñas */
+  .projectName { 
     font-size: 1.1rem;
-    top: 10px; /* Más cerca del borde */
+    top: 10px; 
     right: 15px;
-    /* Considerar centrarlo si el espacio es muy limitado:
-    left: 50%;
-    transform: translateX(-50%);
-    right: auto; */
   }
 
   .timerDisplay {
@@ -225,11 +201,19 @@
     padding: 12px 15px;
   }
 
-  /* En pantallas muy pequeñas, los inputs de HH y MM podrían necesitar ocupar todo el ancho
-     si no se ven bien con el width fijo de 80px del breakpoint anterior.
-     O mantenerlos pequeños si el contenedor .customInputContainer ya los centra bien. */
+  
   .customInputHours,
   .customInputMinutes {
-    width: 70px; /* Puedes ajustar esto o dejar que hereden el 100% del .customInput si es mejor */
+    width: 70px; 
   }
+}
+
+    .customInputSeparator {
+        font-size: 1.3rem; 
+    }
+    }
+    .customInputHours,
+    .customInputMinutes {   
+        width: 70px; 
+    }
 }

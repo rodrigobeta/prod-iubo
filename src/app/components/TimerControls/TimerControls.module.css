@@ -1,0 +1,11 @@
+/* Mueve .controls y estilos de botones específicos si no son globales */
+.controls {
+  margin-bottom: 25px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 45px;
+}
+/* ...media queries ... */

@@ -1,0 +1,13 @@
+/* Estilos para .presetButtons y cualquier estilo específico .presetButton */
+.presetButtons {
+  margin-bottom: 25px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.presetButton {
+  /* Estilos específicos si los hay, si no, dependerá del .button global/de página */
+}
+/* ...media queries ... */

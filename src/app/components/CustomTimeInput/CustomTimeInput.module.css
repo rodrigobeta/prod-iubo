@@ -1,0 +1,90 @@
+/* src/components/CustomTimeInput/CustomTimeInput.module.css */
+
+.customInputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.customInput {
+  background-color: #282828;
+  color: #f0f0f0;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  -moz-appearance: textfield;
+}
+.customInput::-webkit-outer-spin-button,
+.customInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.customInputHours,
+.customInputMinutes {
+  width: 70px;
+}
+
+.customInput:hover {
+  border-color: #777;
+  background-color: #303030;
+}
+
+.customInput:focus {
+  border-color: #1E88E5;
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.3);
+  background-color: #222;
+}
+
+.customInput::placeholder {
+  color: #888;
+  opacity: 0.7;
+}
+
+.customInputSeparator {
+  font-size: 1.5rem;
+  color: #888;
+  padding: 0 5px;
+  line-height: 1;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.customInputContainer:focus-within .customInputSeparator {
+  color: #1E88E5;
+}
+
+@media (max-width: 768px) {
+  .customInputHours,
+  .customInputMinutes {
+    width: 65px;
+    padding: 8px;
+    font-size: 0.95rem;
+  }
+  .customInputSeparator {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .customInputContainer {
+    gap: 5px;
+  }
+  .customInputHours,
+  .customInputMinutes {
+    width: 60px;
+    padding: 8px 6px;
+    font-size: 0.9rem;
+  }
+  .customInputSeparator {
+    font-size: 1.2rem;
+    padding: 0 3px;
+  }
+}

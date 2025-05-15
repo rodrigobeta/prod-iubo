@@ -1,0 +1,17 @@
+/* Mueve aquí los estilos .timerDisplay, .secondsDigit, .secondTick y sus spans internos */
+.timerDisplay {
+  font-size: 6rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+.timerDisplay > span {
+  padding: 0 2px;
+  display: inline-block;
+}
+.secondsDigit { /* ... */ }
+.secondTick { /* ... */ }
+
+/* ...media queries si son específicas ... */

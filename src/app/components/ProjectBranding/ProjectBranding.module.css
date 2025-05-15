@@ -1,0 +1,13 @@
+/* Mueve aquí los estilos .projectName, .projectNameProd, .projectNameUibo */
+.projectName {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  z-index: 10;
+}
+.projectNameProd { color: #E53935; }
+.projectNameUibo { color: #1E88E5; }
+
+/* ...media queries si son específicas para este componente ... */
